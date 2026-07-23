@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architects Coffee | Drafted with Precision. Brewed to Perfection.</title>
+  <meta name="description" content="Architects Coffee - Precision specialty coffee shop and design workspace. Explore our blueprint menu, custom brew studio, and studio desk reservations.">
+  <meta name="theme-color" content="#0A0C10">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- CSS Design System -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="#hero" class="brand-logo" id="brandLogo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">ARCHITECTS</span>
+            <span class="brand-sub">COFFEE STUDIO</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#menu" class="nav-link">Blueprint Menu</a></li>
+          <li><a href="#studio" class="nav-link">Draft Your Brew</a></li>
+          <li><a href="#workspace" class="nav-link">Studio Workspaces</a></li>
+          <li><a href="#contact" class="nav-link">Contact & Hours</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn-icon" id="cartBtn" aria-label="Open Order Cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="badge-count" id="cartBadge">0</span>
+          </button>
+
+          <a href="#workspace" class="btn-primary">
+            <i class="fa-solid fa-table-cells-large"></i> Book Desk
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fa-solid fa-cube"></i> CRAFT COFFEE × ARCHITECTURAL PRECISION
+          </div>
+          <h1 class="hero-title">
+            Drafted with Accuracy.<br>
+            <span>Brewed to Perfection.</span>
+          </h1>
+          <p class="hero-description">
+            Architects Coffee bridges structural precision design with single-origin artisanal coffee roasting. Experience our blueprint pour-overs, high-speed drafting workspaces, and custom coffee studio.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#menu" class="btn-primary">
+              <i class="fa-solid fa-mug-hot"></i> Explore Menu
+            </a>
+            <a href="#studio" class="btn-outline">
+              <i class="fa-solid fa-sliders"></i> Draft Your Brew
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Single Origin Beans</p>
+            </div>
+            <div class="stat-item">
+              <h4>99.4%</h4>
+              <p>Extraction Accuracy</p>
+            </div>
+            <div class="stat-item">
+              <h4>18</h4>
+              <p>Studio Workspaces</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="hero-card-frame">
+            <img src="assets/images/hero.png" alt="Architects Coffee Shop Interior" id="heroImg">
+            <div class="hero-badge-overlay">
+              <div class="badge-icon">
+                <i class="fa-solid fa-compass"></i>
+              </div>
+              <div class="badge-details">
+                <h5>Design District Studio</h5>
+                <p>104 Blueprint Blvd, NY • Open Daily from 07:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE BLUEPRINT MENU SECTION
+       ========================================== -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">ARTISANAL SELECTION</span>
+        <h2 class="section-title">The Blueprint Menu</h2>
+        <p class="section-desc">
+          Every cup is calibrated to exact brew ratios, water chemistry, and roast profiles.
+        </p>
+      </div>
+
+      <div class="menu-controls">
+        <div class="search-bar-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="menuSearch" class="search-input" placeholder="Search menu by origin, roast, or flavor notes...">
+        </div>
+
+        <div class="menu-categories" id="categoryTabs">
+          <button class="category-tab active" data-category="all">All Specs</button>
+          <button class="category-tab" data-category="espresso">Structural Espressos</button>
+          <button class="category-tab" data-category="filter">Filter & Pour-Overs</button>
+          <button class="category-tab" data-category="cold">Cold Extractions</button>
+          <button class="category-tab" data-category="bakes">Artisanal Bakes</button>
+          <button class="category-tab" data-category="beans">Single Origin Beans</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       DRAFT YOUR BREW (CUSTOMIZER STUDIO)
+       ========================================== -->
+  <section class="section studio-section" id="studio">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">BESPOKE COFFEE LAB</span>
+        <h2 class="section-title">Draft Your Custom Brew</h2>
+        <p class="section-desc">
+          Design your exact coffee specifications. Select espresso bases, extraction styles, and milk texture ratios in real-time.
+        </p>
+      </div>
+
+      <div class="studio-grid">
+        <!-- Visual Schematic Schematic -->
+        <div class="schematic-box">
+          <span class="blueprint-code">// SCHEMATIC DIAGRAM v2.4</span>
+          
+          <div class="schematic-glass" id="schematicGlass">
+            <div class="glass-layer layer-foam" id="layerFoam">Microfoam</div>
+            <div class="glass-layer layer-milk" id="layerMilk">Textured Milk</div>
+            <div class="glass-layer layer-base" id="layerBase">Single Origin Espresso</div>
+          </div>
+
+          <div class="schematic-metrics">
+            <div class="metric-card">
+              <label>BASE</label>
+              <span id="metricBase">Espresso</span>
+            </div>
+            <div class="metric-card">
+              <label>MILK RATIO</label>
+              <span id="metricMilk">Whole Velvet</span>
+            </div>
+            <div class="metric-card">
+              <label>TEMP</label>
+              <span id="metricTemp">Hot (65°C)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Form Controls -->
+        <div class="studio-form">
+          <div class="form-group">
+            <label><i class="fa-solid fa-cube"></i> Base Espresso Origin</label>
+            <div class="option-grid">
+              <button class="option-btn selected" data-type="base">Espresso Ethiopia</button>
+              <button class="option-btn" data-type="base">Ristretto Guatemala</button>
+              <button class="option-btn" data-type="base">Cold Brew Draft</button>
+              <button class="option-btn" data-type="base">Kyoto Matcha</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-sliders"></i> Extraction Shots</label>
+            <div class="option-grid">
+              <button class="option-btn selected" data-type="shots">Double (18g)</button>
+              <button class="option-btn" data-type="shots">Triple (24g)</button>
+              <button class="option-btn" data-type="shots">Single Ristretto</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-bottle-droplet"></i> Milk / Dairy Texture</label>
+            <div class="option-grid">
+              <button class="option-btn selected" data-type="milk">Whole Velvet</button>
+              <button class="option-btn" data-type="milk">Oat (Minor Fig)</button>
+              <button class="option-btn" data-type="milk">Almond Silk</button>
+              <button class="option-btn" data-type="milk">Cold Foam Macadamia</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label><i class="fa-solid fa-wand-magic-sparkles"></i> Flavor Accent</label>
+            <div class="option-grid">
+              <button class="option-btn selected" data-type="flavor">Smoked Vanilla</button>
+              <button class="option-btn" data-type="flavor">Dark Cocoa Nibs</button>
+              <button class="option-btn" data-type="flavor">Cardamom Bronze</button>
+              <button class="option-btn" data-type="flavor">None (Pure)</button>
+            </div>
+          </div>
+
+          <div class="studio-price-row">
+            <div>
+              <span class="subheading">CALCULATED PRICE</span>
+              <div class="studio-total" id="customPrice">$5.50</div>
+            </div>
+            <button class="btn-primary" onclick="addCustomBrewToCart()">
+              <i class="fa-solid fa-check"></i> Add Draft Brew to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       WORKSPACE & DESK RESERVATION
+       ========================================== -->
+  <section class="section" id="workspace">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">STUDIO DESK BOOKING</span>
+        <h2 class="section-title">Reserve a Workspace Desk</h2>
+        <p class="section-desc">
+          High-speed fiber connectivity, drafting LED lamps, power outlets, and endless specialty coffee for architects, designers, and creators.
+        </p>
+      </div>
+
+      <div class="desk-grid-container">
+        <!-- Interactive Layout Map -->
+        <div class="floorplan-card">
+          <div class="floorplan-header">
+            <h4><i class="fa-solid fa-map"></i> Floorplan Grid</h4>
+            <ul class="legend-list">
+              <li class="legend-item"><span class="legend-dot dot-available"></span> Available</li>
+              <li class="legend-item"><span class="legend-dot dot-selected"></span> Selected</li>
+              <li class="legend-item"><span class="legend-dot dot-reserved"></span> Reserved</li>
+            </ul>
+          </div>
+
+          <div class="desk-layout" id="deskLayout">
+            <div class="desk-node" data-desk="D-01">
+              <i class="fa-solid fa-laptop-code desk-icon"></i>
+              <div class="desk-title">Drafting Desk 01</div>
+              <div class="desk-type">Sunlight Bar</div>
+            </div>
+            <div class="desk-node" data-desk="D-02">
+              <i class="fa-solid fa-laptop-code desk-icon"></i>
+              <div class="desk-title">Drafting Desk 02</div>
+              <div class="desk-type">Sunlight Bar</div>
+            </div>
+            <div class="desk-node reserved" data-desk="D-03">
+              <i class="fa-solid fa-lock desk-icon"></i>
+              <div class="desk-title">Drafting Desk 03</div>
+              <div class="desk-type">Occupied</div>
+            </div>
+            <div class="desk-node" data-desk="D-04">
+              <i class="fa-solid fa-laptop-code desk-icon"></i>
+              <div class="desk-title">Drafting Desk 04</div>
+              <div class="desk-type">Main Hall</div>
+            </div>
+
+            <div class="desk-node" data-desk="P-01">
+              <i class="fa-solid fa-user-shield desk-icon"></i>
+              <div class="desk-title">Focus Pod 01</div>
+              <div class="desk-type">Quiet Booth</div>
+            </div>
+            <div class="desk-node reserved" data-desk="P-02">
+              <i class="fa-solid fa-lock desk-icon"></i>
+              <div class="desk-title">Focus Pod 02</div>
+              <div class="desk-type">Occupied</div>
+            </div>
+            <div class="desk-node" data-desk="P-03">
+              <i class="fa-solid fa-user-shield desk-icon"></i>
+              <div class="desk-title">Focus Pod 03</div>
+              <div class="desk-type">Quiet Booth</div>
+            </div>
+            <div class="desk-node" data-desk="T-01">
+              <i class="fa-solid fa-users desk-icon"></i>
+              <div class="desk-title">Team Table 01</div>
+              <div class="desk-type">4-Person Desk</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Booking Details Form -->
+        <div class="booking-form-card">
+          <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-calendar-check"></i> Reservation Specs</h3>
+          <form id="bookingForm">
+            <label class="subheading">SELECTED DESK</label>
+            <input type="text" id="selectedDeskDisplay" class="input-style" readonly value="Click a desk on floorplan map..." required>
+
+            <label class="subheading">FULL NAME</label>
+            <input type="text" class="input-style" placeholder="e.g. Maya Lin" required>
+
+            <label class="subheading">EMAIL ADDRESS</label>
+            <input type="email" class="input-style" placeholder="maya@architecture.com" required>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div>
+                <label class="subheading">DATE</label>
+                <input type="date" class="input-style" required>
+              </div>
+              <div>
+                <label class="subheading">TIME SLOT</label>
+                <select class="input-style" required>
+                  <option value="08:00">08:00 - 11:00 AM</option>
+                  <option value="11:00">11:00 AM - 02:00 PM</option>
+                  <option value="14:00">02:00 PM - 05:00 PM</option>
+                  <option value="17:00">05:00 PM - 08:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem;">
+              <i class="fa-solid fa-lock"></i> Confirm Workspace Booking
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTACT DETAILS & LOCATION
+       ========================================== -->
+  <section class="section" id="contact" style="background: rgba(18, 22, 30, 0.3);">
+    <div class="container">
+      <div class="section-header">
+        <span class="subheading">VISIT OR GET IN TOUCH</span>
+        <h2 class="section-title">Contact & Studio Details</h2>
+        <p class="section-desc">
+          Located in the heart of the Design District. Drop by for coffee or reach out to our roasters.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Cards & Hours -->
+        <div class="contact-info-box">
+          <div class="info-card">
+            <div class="info-icon-wrap">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-content">
+              <h4>Architects Coffee Location</h4>
+              <p>104 Blueprint Boulevard, Design District<br>New York, NY 10012</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon-wrap">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="info-content">
+              <h4>Operating Hours</h4>
+              <p>Monday – Friday: 07:00 AM – 07:00 PM<br>Saturday – Sunday: 08:00 AM – 08:00 PM</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon-wrap">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h4>Direct Contact</h4>
+              <p>Email: hello@architectscoffee.com<br>Phone: +1 (555) 272-4483</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon-wrap">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="info-content">
+              <h4>Amenities Included</h4>
+              <p>1Gbps Symmetric Fiber WiFi • Drafting Desk Power • Organic Oat & Milk Bar • Quiet Focus Zones</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-box">
+          <h3 style="margin-bottom: 1.5rem;"><i class="fa-solid fa-paper-plane"></i> Send Us a Message</h3>
+          <form id="contactForm">
+            <label class="subheading">YOUR NAME</label>
+            <input type="text" class="input-style" placeholder="e.g. Frank Wright" required>
+
+            <label class="subheading">EMAIL ADDRESS</label>
+            <input type="email" class="input-style" placeholder="frank@architect.org" required>
+
+            <label class="subheading">SUBJECT</label>
+            <select class="input-style" required>
+              <option value="General Inquiry">General Coffee & Studio Inquiry</option>
+              <option value="Private Event">Private Architectural Event / Catering</option>
+              <option value="Wholesale Beans">Wholesale Coffee Bean Supply</option>
+              <option value="Workspace">Workspace Desk Membership</option>
+            </select>
+
+            <label class="subheading">MESSAGE</label>
+            <textarea class="input-style" rows="4" placeholder="How can we help your team or coffee setup?" required></textarea>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer style="padding: 50px 0 30px 0; border-top: 1px solid var(--border-color); background: #07090C;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 2rem;">
+        <a href="#hero" class="brand-logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">ARCHITECTS</span>
+            <span class="brand-sub">COFFEE STUDIO</span>
+          </div>
+        </a>
+
+        <div style="display: flex; gap: 1.5rem; font-size: 1.2rem; color: var(--text-muted);">
+          <a href="#" style="color: inherit;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: inherit;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: inherit;"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-dim); flex-wrap: wrap; gap: 1rem;">
+        <p>&copy; 2026 Architects Coffee Shop. All rights reserved. Drafted with precision.</p>
+        <p>Use Promo Code <strong style="color: var(--accent-bronze);">ARCH20</strong> for 20% off your order.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       SLIDE-OUT BLUEPRINT CART DRAWER
+       ========================================== -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-header">
+      <h4><i class="fa-solid fa-bag-shopping"></i> Blueprint Order</h4>
+      <button class="btn-icon" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-body" id="cartItems">
+      <!-- Dynamic cart items rendered by app.js -->
+    </div>
+
+    <div class="cart-footer">
+      <div style="margin-bottom: 1rem;">
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+          <input type="text" id="promoInput" class="input-style" style="margin-bottom:0; padding:0.5rem 0.75rem; font-size:0.8rem;" placeholder="Promo Code (e.g. ARCH20)">
+          <button class="btn-outline" style="padding:0.5rem 0.9rem;" onclick="applyPromo()">Apply</button>
+        </div>
+      </div>
+
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Estimated NY Tax (8.875%)</span>
+        <span id="cartTax">$0.00</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total Order</span>
+        <span id="cartTotal" style="color: var(--accent-bronze);">$0.00</span>
+      </div>
+
+      <button class="btn-primary" style="width: 100%; justify-content: center; margin-top: 1.25rem;" onclick="checkoutOrder()">
+        <i class="fa-solid fa-credit-card"></i> Complete Blueprint Order
+      </button>
+    </div>
+  </aside>
+
+  <!-- JS Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
